@@ -1,13 +1,13 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./components/App";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './components/App';
 import { AppContainer } from 'react-hot-loader';
 
 const render = (Component) => {
 
   ReactDOM.render(
     <AppContainer>
-    <Component/>
+      <Component/>
     </AppContainer>,
     document.getElementById('react-app-root')
   );
@@ -15,8 +15,10 @@ const render = (Component) => {
 
 render(App);
 
-if(module.hot) {
-  module.hot.accept('./components/App', ()=> {
+/*eslint-disable */
+if (module.hot) {
+  module.hot.accept('./components/App', () => {
     render(App)
   });
 }
+/*eslint-enable */
